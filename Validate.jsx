@@ -59,6 +59,5 @@ const Example = () => {
 }
 
 export { Validate,
-        required,
-        Example
+        required
         }
