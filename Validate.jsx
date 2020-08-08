@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React, { Fragment, useState } from "react"
 
 // You can also make up your own rules! :)
 const required = (value) => {
@@ -36,8 +36,12 @@ const Example = () => {
   })
 
   const handleSubmit = (e) => {
-    e.preventDefault
+    e.preventDefault()
     setState({ ...state, shouldApplyValidation: true })
+  }
+
+  const handleChangeName = (e) => {
+    setState({ ...state, name: e.target.value })
   }
 
   return (
@@ -48,12 +52,13 @@ const Example = () => {
           apply={state.shouldApplyValidation}
           >
 
-        <input value={name} onChange={handleChangeName} />
+        <input value={state.name} onChange={handleChangeName} />
       </Validate>
     </form>
   )
 }
 
 export { Validate,
-        required
+        required,
+        Example
         }
