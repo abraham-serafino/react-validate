@@ -27,7 +27,7 @@ const Validate = ({ value, rules = [], apply = true, children }) => {
     )
 }
 
-// import { Validate, required } from "./Validate.js"
+// import { Validate, required } from "./Validate.jsx"
 
 const Example = () => {
   const [state, setState] = useState({
